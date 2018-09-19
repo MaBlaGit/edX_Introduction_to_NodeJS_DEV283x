@@ -20,7 +20,7 @@ fs.readFile(path.join(__dirname, './customer-data.csv'), function(error, data){
 				toObject[headerArray[index]] = dataFromArray[index];
 				counter++;
 				
-				if(index === dataFromArray.length - 1 && Object.keys(toObject).length === 10){
+				if(index === dataFromArray.length - 1 && Object.keys(toObject).length === headerArray.length){
 					arrayOfObjects.push(toObject);
 					counter = 0;
 					toObject = {};
