@@ -17,7 +17,7 @@ app.delete('/posts/:postId/', routes.post.removePost);
 
 app.get('/posts/:postId/comments', routes.comments.getComments);
 app.post('/posts/:postId/comments', routes.comments.addComment);
-app.put('/posts/:postId/comments/commentId', routes.comments.addComment);
+app.put('/posts/:postId/comments/commentId', routes.comments.updateComment);
 
 app.listen(port);
 console.log(`Server is listening on port: ${port}...`);
